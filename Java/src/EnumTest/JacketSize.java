@@ -34,4 +34,20 @@ public enum JacketSize {
         return chetSize; 
     }
     
+    @Override
+    public String toString(){
+        switch (this) {
+            case small:
+                return "S";
+            case medium: 
+                return "M"; 
+            case large: 
+                return "L";
+            case extra_large: 
+                return "XL"; 
+            default:
+                return "XXL"; 
+        }
+    }
+    
 }

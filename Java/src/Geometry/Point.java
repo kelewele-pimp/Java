@@ -56,7 +56,7 @@ public class Point {
     
     
     public String toString(){
-        return String.valueOf(x) + ", " + y; 
+        return x + ", " + y; 
     }
     
 }
