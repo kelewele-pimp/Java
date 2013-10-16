@@ -19,6 +19,29 @@ public class Duck extends Animal{
         this.breed = "unknown"; 
     }
     
+    //Copy constructor for Duck
+    public Duck(Duck duck){
+        super(duck); 
+        this.name = duck.name; 
+        this.breed = duck.breed; 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+    
     public Duck(String name, String breed){
         super("Duck"); 
         this.name = name; 

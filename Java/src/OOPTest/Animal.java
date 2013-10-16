@@ -15,6 +15,11 @@ public abstract class Animal {
     public Animal(String type) {
         this.type = type;
     }
+    
+    //Copy Constructor for Animal
+    public Animal(Animal animal){
+        this.type = animal.type; 
+    }
 
     @Override
     public String toString() {

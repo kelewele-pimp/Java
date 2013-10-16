@@ -18,7 +18,29 @@ public class Cat extends Animal {
         this.name = name; 
         this.breed = "unknown"; 
     }
-    
+    //Copy Constructor for Cat
+    public Cat(Cat cat){
+        super(cat); 
+        this.name = cat.name; 
+        this.breed = cat.breed; 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+        
     public Cat(String name, String breed){
         super("Cat");
         this.name = name; 
