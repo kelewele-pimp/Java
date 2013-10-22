@@ -19,12 +19,21 @@ public class TryBlockTest {
             System.out.println("Code at end of first try block in divide()");
             return array[index + 2];
         } catch(ArithmeticException e){
-            System.out.println("Arithmetic exception caught in divide()");
+            System.err.println("Arithmetic exception caught in divide()\n"
+                    + "\nMessage in exception object: \n\t"
+                    + e.getMessage());
+            e.printStackTrace();
+            System.err.println("End of stack trace output\n");
             System.out.println("index = " + index + 
                     " Expression: array[" + index + "]/array[" + (index+1) + "] is " + 
                     array[index] + "//" + array[index + 1]);
         } catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("index of of bounds exception caught in divide()");
+            System.err.println("index of of bounds exception caught in divide()\n"
+                    + "\nMessage in exception object:\n\t"
+                    + e.getMessage());
+            System.err.println("\nStack trace output\n");
+            e.printStackTrace();
+            System.out.println("\nEnd of stack trace output\n");
             System.out.println("array lenght = " + array.length + 
                     " index = " + index);
         } finally {
