@@ -6,10 +6,7 @@
 package Collections;
 
 import java.io.*;
-import java.util.ListIterator;
-import java.util.Vector;
-import javax.swing.plaf.basic.BasicSplitPaneUI;
-
+import java.util.*;
 /**
  *
  * @author desmond
@@ -40,6 +37,15 @@ public class TryPersonVector {
             Person name = iterlist.next(); 
             System.out.println(name);
         }
+        
+        //Now sort the vector contents and list it..
+        //(nb: the person classs has to implement the comparable interface first before the sort method can be used)
+        Collections.sort(filmCast);
+        System.out.println("\nThe cast in ascending sequence is: ");
+        for (Person person : filmCast) {
+            System.out.println(person);
+        }
+        
         System.out.println("\nTHe vector currently has rrom for " + 
                 (filmCast.capacity() - count) + " more people");
     }
